@@ -101,7 +101,7 @@
       text-align: center;
     }
 
-    /* NUEVO diseño de cuenta regresiva */
+    /* Cuenta regresiva */
     .countdown {
       margin-top: 26px;
       margin-bottom: 6px;
@@ -188,14 +188,6 @@
       box-shadow: 0 10px 18px rgba(0,0,0,0.12);
     }
 
-    footer {
-      padding: 12px 16px 26px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: #7c5b3b;
-      line-height: 1.4;
-    }
-
     .divider {
       margin: 22px auto 8px;
       width: 100%;
@@ -211,136 +203,27 @@
       background-size: 20% 100%;
     }
 
-    @media (min-width: 600px) {
-      .page {
-        margin-top: 16px;
-        margin-bottom: 16px;
-      }
+    footer {
+      padding: 12px 16px 26px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #7c5b3b;
+      line-height: 1.4;
+    }
+
+    /* 🧸 Osito en la esquina */
+    .corner-bear {
+      position: fixed;
+      bottom: 12px;
+      right: 12px;
+      width: 70px;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 999;
     }
   </style>
 </head>
 
 <body>
   <div class="page">
-    <header>
-      <div class="tag">Baby Shower</div>
-      <h1>Celebramos a</h1>
-      <h2>Faustino</h2>
-      <p class="subtext">
-        El amor crece y nuestra familia también…  
-        muy pronto una nueva luz llegará para alegrar nuestras vidas.
-      </p>
-    </header>
-
-    <main>
-      <section class="card">
-        <div class="details-title">Detalles del encuentro</div>
-        <div class="details-grid">
-          <div>
-            <div class="details-label">Fecha</div>
-            <div class="details-value">22 · 17:00 hs</div>
-          </div>
-          <div>
-            <div class="details-label">Hora</div>
-            <div class="details-value">17:00 hs</div>
-          </div>
-          <div>
-            <div class="details-label">Lugar</div>
-            <div class="details-value">Baby Shower de Faustino</div>
-          </div>
-          <div>
-            <div class="details-label">Dirección</div>
-            <div class="details-value">Pescadores 151</div>
-          </div>
-        </div>
-
-        <p class="phrase">
-          Nos llena de alegría poder compartir este momento tan especial con vos.
-          Tu presencia hará que este día sea aún más inolvidable.
-        </p>
-
-        <!-- NUEVA cuenta regresiva -->
-        <div class="countdown">
-          <div class="countdown-header">
-            <span class="clock">⏰</span>
-            <span>Falta para el gran día:</span>
-          </div>
-          <div class="countdown-grid">
-            <div class="count-box">
-              <span id="days">0</span>
-              <small>Días</small>
-            </div>
-            <div class="count-box">
-              <span id="hours">0</span>
-              <small>Horas</small>
-            </div>
-            <div class="count-box">
-              <span id="minutes">0</span>
-              <small>Min</small>
-            </div>
-            <div class="count-box">
-              <span id="seconds">0</span>
-              <small>Seg</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="buttons">
-          <!-- LINK REAL A MAPS -->
-          <a class="btn btn-primary"
-             href="https://share.google/BM9FBAquPjBW6WIll"
-             target="_blank">
-            📍 Ver ubicación
-          </a>
-
-          <!-- CAMBIÁ EL NÚMERO POR EL TUYO -->
-          <a class="btn btn-secondary"
-             href="https://wa.me/5492613162802?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Faustino%20🎈"
-             target="_blank">
-            📲 Confirmar asistencia por WhatsApp
-          </a>
-        </div>
-      </section>
-
-      <div class="divider"></div>
-    </main>
-
-    <footer>
-      Gracias por acompañarnos en esta espera tan especial.  
-      ¡Te esperamos para celebrar juntos la llegada de Faustino! 💛
-    </footer>
-  </div>
-
-  <script>
-    // ⭐ CONFIGURAR FECHA DEL EVENTO ⭐
-    // Ajustá el mes y año según corresponda.
-    // Formato: "YYYY-MM-DDTHH:MM:SS"
-    const eventDate = new Date("2025-12-22T17:00:00");
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = eventDate - now;
-
-      if (diff <= 0) {
-        document.querySelector(".countdown").innerHTML =
-          "¡Hoy celebramos el Baby Shower de Faustino! 🎉";
-        return;
-      }
-
-      const seconds = Math.floor(diff / 1000);
-      const days = Math.floor(seconds / (3600 * 24));
-      const hours = Math.floor((seconds % (3600 * 24)) / 3600);
-      const minutes = Math.floor((seconds % 3600) / 60);
-      const sec = seconds % 60;
-
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = sec;
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
-</html>
+    <head
