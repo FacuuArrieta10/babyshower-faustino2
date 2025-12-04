@@ -54,5 +54,230 @@
     .subtext {
       font-size: 0.95rem;
       margin-top: 10px;
-      line
+      line-height: 1.4;
+    }
 
+    .card {
+      background: #fff7f2;
+      margin: 16px;
+      padding: 16px 18px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .details-title {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      color: #f27c7c;
+      margin-bottom: 8px;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      font-size: 0.95rem;
+    }
+
+    .details-label {
+      font-weight: bold;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #916b73;
+    }
+
+    .details-value {
+      font-size: 0.98rem;
+    }
+
+    .phrase {
+      margin-top: 16px;
+      font-size: 0.98rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .countdown {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .countdown span {
+      display: inline-block;
+      min-width: 60px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f27c7c, #ffb08a);
+      color: #fff;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #d85c6b;
+      border: 1px solid #f3b1a0;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+    }
+
+    footer {
+      padding: 10px 16px 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #8f7379;
+      line-height: 1.4;
+    }
+
+    .divider {
+      margin: 18px auto 6px;
+      width: 100%;
+      max-width: 420px;
+      height: 40px;
+      background: radial-gradient(circle at 0% 0%, #ffb08a 0, #ffb08a 14px, transparent 15px),
+                  radial-gradient(circle at 25% 0%, #69c5c5 0, #69c5c5 14px, transparent 15px),
+                  radial-gradient(circle at 50% 0%, #ffd66b 0, #ffd66b 14px, transparent 15px),
+                  radial-gradient(circle at 75% 0%, #f27c7c 0, #f27c7c 14px, transparent 15px),
+                  radial-gradient(circle at 100% 0%, #69c5c5 0, #69c5c5 14px, transparent 15px);
+      background-repeat: no-repeat;
+      background-size: 20% 100%;
+    }
+
+    @media (min-width: 600px) {
+      .page {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="tag">Baby Shower</div>
+      <h1>Celebramos a</h1>
+      <h2>Faustino</h2>
+      <p class="subtext">
+        El amor crece y nuestra familia también…  
+        muy pronto una nueva luz llegará para alegrar nuestras vidas.
+      </p>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="details-title">Detalles del encuentro</div>
+        <div class="details-grid">
+          <div>
+            <div class="details-label">Fecha</div>
+            <div class="details-value">22 · 17:00 hs</div>
+          </div>
+          <div>
+            <div class="details-label">Hora</div>
+            <div class="details-value">17:00 hs</div>
+          </div>
+          <div>
+            <div class="details-label">Lugar</div>
+            <div class="details-value">Baby Shower de Faustino</div>
+          </div>
+          <div>
+            <div class="details-label">Dirección</div>
+            <div class="details-value">Pescadores 151</div>
+          </div>
+        </div>
+
+        <p class="phrase">
+          Nos llena de alegría poder compartir este momento tan especial con vos.
+          Tu presencia hará que este día sea aún más inolvidable.
+        </p>
+
+        <div class="countdown">
+          Falta para el gran día:<br>
+          <span id="days">0d</span>
+          <span id="hours">0h</span>
+          <span id="minutes">0m</span>
+          <span id="seconds">0s</span>
+        </div>
+
+        <div class="buttons">
+          <!-- LINK A MAPS (BUSCA LA DIRECCIÓN PESCADORES 151) -->
+          <a class="btn btn-primary"
+             href="https://www.google.com/maps/search/?api=1&query=Pescadores+151"
+             target="_blank">
+            📍 Ver ubicación
+          </a>
+
+          <!-- CAMBIÁ EL NÚMERO POR EL TUYO -->
+          <a class="btn btn-secondary"
+             href="https://wa.me/5492610000000?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Faustino%20🎈"
+             target="_blank">
+            📲 Confirmar asistencia por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+    </main>
+
+    <footer>
+      Gracias por acompañarnos en esta espera tan especial.  
+      ¡Te esperamos para celebrar juntos la llegada de Faustino! 💛
+    </footer>
+  </div>
+
+  <script>
+    // ⭐ FECHA DEL EVENTO: 22 A LAS 17 HS ⭐
+    // Cambiá acá si necesitás otro día/mes/año
+    const eventDate = new Date("2025-12-22T17:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        document.querySelector(".countdown").innerHTML =
+          "¡Hoy celebramos el Baby Shower de Faustino! 🎉";
+        return;
+      }
+
+      const seconds = Math.floor(diff / 1000);
+      const days = Math.floor(seconds / (3600 * 24));
+      const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const sec = seconds % 60;
+
+      document.getElementById("days").textContent = days + "d";
+      document.getElementById("hours").textContent = hours + "h";
+      document.getElementById("minutes").textContent = minutes + "m";
+      document.getElementById("seconds").textContent = sec + "s";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
