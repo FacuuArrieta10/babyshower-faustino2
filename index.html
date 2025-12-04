@@ -14,8 +14,8 @@
     }
 
     body {
-      background: #ffe6dd;
-      color: #3c2c30;
+      background: #f4efe4; /* beige */
+      color: #4b3928;      /* marrón */
     }
 
     .page {
@@ -36,19 +36,20 @@
       font-size: 0.85rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: #f27c7c;
+      color: #7c5b3b; /* marrón más intenso */
     }
 
     h1 {
       font-size: 1.9rem;
       margin-top: 4px;
+      color: #4b3928;
     }
 
     h2 {
       font-family: "Pacifico", "Brush Script MT", cursive;
-      font-size: 2rem;
+      font-size: 2.1rem;
       margin-top: 6px;
-      color: #d85c6b;
+      color: #6ba389; /* verde */
     }
 
     .subtext {
@@ -58,19 +59,20 @@
     }
 
     .card {
-      background: #fff7f2;
+      background: #fffaf1; /* beige clarito */
       margin: 16px;
-      padding: 16px 18px 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 18px 18px 22px;
+      border-radius: 22px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      border: 1px solid rgba(107,163,137,0.25); /* verde suave */
     }
 
     .details-title {
       text-transform: uppercase;
       font-size: 0.8rem;
       letter-spacing: 0.18em;
-      color: #f27c7c;
-      margin-bottom: 8px;
+      color: #7c5b3b;
+      margin-bottom: 10px;
     }
 
     .details-grid {
@@ -85,7 +87,7 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.09em;
-      color: #916b73;
+      color: #7c5b3b;
     }
 
     .details-value {
@@ -93,28 +95,69 @@
     }
 
     .phrase {
-      margin-top: 16px;
+      margin-top: 18px;
       font-size: 0.98rem;
       line-height: 1.5;
       text-align: center;
     }
 
+    /* NUEVO diseño de cuenta regresiva */
     .countdown {
-      margin-top: 14px;
+      margin-top: 26px;
+      margin-bottom: 6px;
       text-align: center;
-      font-size: 0.92rem;
     }
 
-    .countdown span {
-      display: inline-block;
+    .countdown-header {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      color: #4b3928;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .countdown-header .clock {
+      font-size: 1.1rem;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      justify-items: center;
+    }
+
+    .count-box {
+      background: #f1e5cf; /* beige intermedio */
+      border-radius: 14px;
+      padding: 8px 4px;
       min-width: 60px;
+      border: 1px solid rgba(107,163,137,0.4); /* verde suave */
+    }
+
+    .count-box span {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #4b3928;
+    }
+
+    .count-box small {
+      display: block;
+      margin-top: 2px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #7c5b3b;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 18px;
+      gap: 12px;
+      margin-top: 22px;
     }
 
     .btn {
@@ -125,19 +168,19 @@
       cursor: pointer;
       text-align: center;
       text-decoration: none;
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #f27c7c, #ffb08a);
+      background: linear-gradient(135deg, #6ba389, #4b3928); /* verde a marrón */
       color: #fff;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16);
     }
 
     .btn-secondary {
-      background: #fff;
-      color: #d85c6b;
-      border: 1px solid #f3b1a0;
+      background: #fffaf1;
+      color: #4b3928;
+      border: 1px solid #6ba389;
     }
 
     .btn:hover {
@@ -146,23 +189,24 @@
     }
 
     footer {
-      padding: 10px 16px 24px;
+      padding: 12px 16px 26px;
       text-align: center;
       font-size: 0.82rem;
-      color: #8f7379;
+      color: #7c5b3b;
       line-height: 1.4;
     }
 
     .divider {
-      margin: 18px auto 6px;
+      margin: 22px auto 8px;
       width: 100%;
       max-width: 420px;
       height: 40px;
-      background: radial-gradient(circle at 0% 0%, #ffb08a 0, #ffb08a 14px, transparent 15px),
-                  radial-gradient(circle at 25% 0%, #69c5c5 0, #69c5c5 14px, transparent 15px),
-                  radial-gradient(circle at 50% 0%, #ffd66b 0, #ffd66b 14px, transparent 15px),
-                  radial-gradient(circle at 75% 0%, #f27c7c 0, #f27c7c 14px, transparent 15px),
-                  radial-gradient(circle at 100% 0%, #69c5c5 0, #69c5c5 14px, transparent 15px);
+      background:
+        radial-gradient(circle at 0% 0%, #f4efe4 0, #f4efe4 14px, transparent 15px),
+        radial-gradient(circle at 25% 0%, #6ba389 0, #6ba389 14px, transparent 15px),
+        radial-gradient(circle at 50% 0%, #d2b48c 0, #d2b48c 14px, transparent 15px),
+        radial-gradient(circle at 75% 0%, #4b3928 0, #4b3928 14px, transparent 15px),
+        radial-gradient(circle at 100% 0%, #6ba389 0, #6ba389 14px, transparent 15px);
       background-repeat: no-repeat;
       background-size: 20% 100%;
     }
@@ -215,25 +259,43 @@
           Tu presencia hará que este día sea aún más inolvidable.
         </p>
 
+        <!-- NUEVA cuenta regresiva -->
         <div class="countdown">
-          Falta para el gran día:<br>
-          <span id="days">0d</span>
-          <span id="hours">0h</span>
-          <span id="minutes">0m</span>
-          <span id="seconds">0s</span>
+          <div class="countdown-header">
+            <span class="clock">⏰</span>
+            <span>Falta para el gran día:</span>
+          </div>
+          <div class="countdown-grid">
+            <div class="count-box">
+              <span id="days">0</span>
+              <small>Días</small>
+            </div>
+            <div class="count-box">
+              <span id="hours">0</span>
+              <small>Horas</small>
+            </div>
+            <div class="count-box">
+              <span id="minutes">0</span>
+              <small>Min</small>
+            </div>
+            <div class="count-box">
+              <span id="seconds">0</span>
+              <small>Seg</small>
+            </div>
+          </div>
         </div>
 
         <div class="buttons">
-          <!-- LINK A MAPS (BUSCA LA DIRECCIÓN PESCADORES 151) -->
+          <!-- LINK REAL A MAPS -->
           <a class="btn btn-primary"
-             href="https://www.google.com/maps/search/?api=1&query=Pescadores+151"
+             href="https://share.google/BM9FBAquPjBW6WIll"
              target="_blank">
             📍 Ver ubicación
           </a>
 
           <!-- CAMBIÁ EL NÚMERO POR EL TUYO -->
           <a class="btn btn-secondary"
-             href="https://wa.me/5492610000000?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Faustino%20🎈"
+             href="https://wa.me/5492613162802?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Faustino%20🎈"
              target="_blank">
             📲 Confirmar asistencia por WhatsApp
           </a>
@@ -250,8 +312,9 @@
   </div>
 
   <script>
-    // ⭐ FECHA DEL EVENTO: 22 A LAS 17 HS ⭐
-    // Cambiá acá si necesitás otro día/mes/año
+    // ⭐ CONFIGURAR FECHA DEL EVENTO ⭐
+    // Ajustá el mes y año según corresponda.
+    // Formato: "YYYY-MM-DDTHH:MM:SS"
     const eventDate = new Date("2025-12-22T17:00:00");
 
     function updateCountdown() {
@@ -270,10 +333,10 @@
       const minutes = Math.floor((seconds % 3600) / 60);
       const sec = seconds % 60;
 
-      document.getElementById("days").textContent = days + "d";
-      document.getElementById("hours").textContent = hours + "h";
-      document.getElementById("minutes").textContent = minutes + "m";
-      document.getElementById("seconds").textContent = sec + "s";
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = sec;
     }
 
     updateCountdown();
