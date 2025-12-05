@@ -188,6 +188,33 @@
       box-shadow: 0 10px 18px rgba(0,0,0,0.12);
     }
 
+    /* Tarjeta de regalos */
+    .gifts-title {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      color: #7c5b3b;
+      margin-bottom: 8px;
+    }
+
+    .gifts-text {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .gifts-list {
+      list-style: none;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding-left: 0;
+    }
+
+    .gifts-list li::before {
+      content: "🧸 ";
+    }
+
     .divider {
       margin: 22px auto 8px;
       width: 100%;
@@ -211,20 +238,34 @@
       line-height: 1.4;
     }
 
-    /* 🧸 Osito en la esquina */
-    .corner-bear {
+    /* 🧸 Ositos decorativos (emoji) */
+    .corner-bear-top,
+    .corner-bear-bottom {
       position: fixed;
-      bottom: 12px;
-      right: 12px;
-      width: 70px;
-      opacity: 0.9;
+      font-size: 62px;
+      opacity: 0.95;
       pointer-events: none;
       z-index: 999;
+    }
+
+    .corner-bear-top {
+      top: 4px;
+      left: 8px;
+    }
+
+    .corner-bear-bottom {
+      bottom: 8px;
+      right: 12px;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Ositos decorativos -->
+  <div class="corner-bear-top">🧸</div>
+  <div class="corner-bear-bottom">🧸</div>
+
   <div class="page">
     <header>
       <div class="tag">Baby Shower</div>
@@ -237,6 +278,7 @@
     </header>
 
     <main>
+      <!-- Tarjeta principal -->
       <section class="card">
         <div class="details-title">Detalles del encuentro</div>
         <div class="details-grid">
@@ -263,10 +305,10 @@
           Tu presencia hará que este día sea aún más inolvidable.
         </p>
 
-        <!-- NUEVA cuenta regresiva -->
+        <!-- Cuenta regresiva -->
         <div class="countdown">
           <div class="countdown-header">
-            <span class="clock">⏰</span>
+            <span class="clock">🧸</span>
             <span>Falta para el gran día:</span>
           </div>
           <div class="countdown-grid">
@@ -304,6 +346,25 @@
         </div>
       </section>
 
+      <!-- Tarjeta de regalos -->
+      <section class="card">
+        <div class="gifts-title">Sugerencias de regalos</div>
+        <p class="gifts-text">
+          Si te gustaría darle un mimo a Faustino, te dejamos algunas ideas.  
+          No es necesario llevar nada, tu presencia ya es un regalo para nosotros. 💛
+        </p>
+        <ul class="gifts-list">
+          <li>Pañales (talle RN o 1)</li>
+          <li>Toallitas húmedas para bebé</li>
+          <li>Crema para la colita / óleo calcáreo</li>
+          <li>Mantita o frazada suave para bebé</li>
+          <li>Baberos o toallitas de boca</li>
+          <li>Mordillos o juguetes sensoriales</li>
+          <li>Shampoo y jabón neutro para bebé</li>
+          <li>Termómetro digital o chupete termómetro</li>
+        </ul>
+      </section>
+
       <div class="divider"></div>
     </main>
 
@@ -312,9 +373,6 @@
       ¡Te esperamos para celebrar juntos la llegada de Faustino! 💛
     </footer>
   </div>
-
-  <!-- 🧸 Osito decorativo -->
-  <img class="corner-bear" src="https://cdn.jsdelivr.net/gh/openhug/svg-bears/bear-minimal-beige.svg" alt="Osito decorativo">
 
   <script>
     const eventDate = new Date("2025-12-22T17:00:00");
