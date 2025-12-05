@@ -27,25 +27,17 @@
       justify-content: space-between;
     }
 
-    /* ----------- HEADER ----------- */
+    /* ---------------- HEADER ---------------- */
 
     header {
       text-align: center;
       padding: 32px 16px 12px;
     }
 
-    .tag {
-      font-size: 0.85rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #7c5b3b;
-      margin-bottom: 4px;
-    }
-
     h2 {
       font-family: "Pacifico", "Brush Script MT", cursive;
       font-size: 2.3rem;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: #6ba389; /* verde */
     }
 
@@ -57,7 +49,7 @@
       color: #4b3928;
     }
 
-    /* ----------- CARD ----------- */
+    /* ---------------- CARD ---------------- */
 
     .card {
       background: #fffaf1;
@@ -103,7 +95,7 @@
       color: #4b3928;
     }
 
-    /* ----------- COUNTDOWN ----------- */
+    /* ---------------- COUNTDOWN ---------------- */
 
     .countdown {
       margin-top: 25px;
@@ -118,10 +110,6 @@
       justify-content: center;
       align-items: center;
       gap: 8px;
-    }
-
-    .countdown-header .bear-icon {
-      font-size: 1.4rem;
     }
 
     .countdown-grid {
@@ -155,7 +143,7 @@
       letter-spacing: 0.06em;
     }
 
-    /* ----------- BUTTONS ----------- */
+    /* ---------------- BUTTONS ---------------- */
 
     .buttons {
       display: flex;
@@ -192,7 +180,7 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.12);
     }
 
-    /* ----------- DIVIDER ----------- */
+    /* ---------------- DIVIDER ---------------- */
 
     .divider {
       margin: 24px auto 12px;
@@ -209,7 +197,7 @@
       background-size: 20% 100%;
     }
 
-    /* ----------- FOOTER ----------- */
+    /* ---------------- FOOTER ---------------- */
 
     footer {
       padding: 12px 16px 26px;
@@ -219,13 +207,13 @@
       line-height: 1.4;
     }
 
-    /* ----------- OSITO ASOMÁNDOSE ----------- */
+    /* ---------------- OSITO ASOMÁNDOSE ---------------- */
 
     .corner-bear-top {
       position: fixed;
       top: -8px;
-      left: 6px;
-      font-size: 72px;   /* tamaño del emoji 🧸 */
+      left: -6px;
+      width: 95px;
       opacity: 0.98;
       pointer-events: none;
       z-index: 999;
@@ -235,13 +223,14 @@
 
 <body>
 
-  <!-- 🧸 Osito asomándose (emoji, siempre funciona) -->
-  <div class="corner-bear-top">🧸</div>
+  <!-- 🧸 OSITO ASOMÁNDOSE -->
+  <img class="corner-bear-top"
+       src="https://www.svgrepo.com/download/447920/bear-peek.svg"
+       alt="Osito asomándose" />
 
   <div class="page">
 
     <header>
-      <div class="tag">Baby Shower</div>
       <h2>Faustino</h2>
       <p class="subtext">
         El amor crece y nuestra familia también...  
@@ -278,12 +267,9 @@
           Tu presencia hará que este día sea aún más inolvidable.
         </p>
 
-        <!-- ----------- COUNTDOWN ----------- -->
+        <!-- ---------------- COUNTDOWN ---------------- -->
         <div class="countdown">
-          <div class="countdown-header">
-            <span class="bear-icon">🧸</span>
-            <span>Falta para el gran día</span>
-          </div>
+          <div class="countdown-header">⏰ Falta para el gran día</div>
 
           <div class="countdown-grid">
             <div class="count-box">
@@ -305,7 +291,7 @@
           </div>
         </div>
 
-        <!-- ----------- BUTTONS ----------- -->
+        <!-- ---------------- BUTTONS ---------------- -->
         <div class="buttons">
 
           <a class="btn btn-primary"
@@ -334,10 +320,9 @@
 
   </div>
 
-  <!-- ----------- COUNTDOWN SCRIPT ----------- -->
+  <!-- ---------------- COUNTDOWN SCRIPT ---------------- -->
 
   <script>
-    // Ajustá la fecha real si hace falta
     const eventDate = new Date("2025-12-22T17:00:00");
 
     function updateCountdown() {
