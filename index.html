@@ -385,16 +385,41 @@
           (sin ropa, así podemos aprovechar todo al máximo). 💛
         </p>
         <ul class="gifts-list">
-          <li>Pañales (talles RN, 1 o 2)</li>
+          <li>Pañales (talles: P, M, G)</li>
           <li>Toallitas húmedas</li>
           <li>Óleo calcáreo o crema para la piel</li>
-          <li>Mordillos o sonajeros</li>
+          <li>Mordiscos o sonajeros</li>
           <li>Baberos impermeables</li>
           <li>Gimnasio de actividades o juguete sensorial</li>
-          <li>Libros de tela o de baño</li>
+          <li>Peluches o juguetes</li>
           <li>Toalla con capucha o mantita suave</li>
         </ul>
       </section>
+
+      <section class="card">
+  <div class="gifts-title">Regalo virtual</div>
+
+  <p class="gifts-text">
+    También sumamos la opción de un regalo virtual para Faustino 🧸✨<br>
+    Si te resulta más cómodo, podés enviar un aporte al alias:
+  </p>
+
+  <ul class="gifts-list">
+    <li><strong id="aliasText">iarazadro</strong></li>
+  </ul>
+
+  <button class="btn btn-secondary" onclick="copiarAlias()" style="margin-top: 12px;">
+    📋 Copiar alias
+  </button>
+
+  <p id="copiadoMsg" class="gifts-text" style="display:none; margin-top:8px; color:#6ba389;">
+    Alias copiado ✔️
+  </p>
+
+  <p class="gifts-text" style="margin-top: 12px;">
+    ¡Gracias de corazón! 💛
+  </p>
+</section>
 
       <div class="divider"></div>
     </main>
@@ -442,6 +467,18 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
+//COPY ALIAS
+function copiarAlias() {
+  const alias = document.getElementById("aliasText").textContent;
+
+  navigator.clipboard.writeText(alias).then(() => {
+    const msg = document.getElementById("copiadoMsg");
+    msg.style.display = "block";
+    setTimeout(() => msg.style.display = "none", 1800);
+  });
+}
+
+  
   // ⭐ MÚSICA
   function toggleMusic() {
     const music = document.getElementById("bg-music");
@@ -461,6 +498,7 @@
 
 </body>
 </html>
+
 
 
 
