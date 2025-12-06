@@ -370,7 +370,7 @@
           </a>
 
           <a class="btn btn-secondary"
-             href="https://wa.me/5492610000000?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Faustino%20🎈"
+             href="https://wa.me/5492613162802?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20al%20Baby%20Shower%20de%20Faustino%20🎈"
              target="_blank">
             📲 Confirmar asistencia por WhatsApp
           </a>
@@ -404,59 +404,64 @@
       ¡Te esperamos para celebrar juntos la llegada de Faustino! 💛
     </footer>
   </div>
-
-  <!-- Audio (subí musica.mp3 al repo si querés que funcione) -->
- <audio id="bg-music" loop>
+<!-- AUDIO (música bebé suave) -->
+<audio id="bg-music" loop preload="auto">
+  <!-- Asegurate que este nombre coincida EXACTO con el archivo del repo -->
   <source src="freepik-baby-steps.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
 </audio>
 
+<script>
+  // ⭐ CUENTA REGRESIVA
+  const eventDate = new Date("2025-12-22T17:00:00");
 
-  <script>
-    // Cuenta regresiva
-    const eventDate = new Date("2025-12-22T17:00:00");
+  function updateCountdown() {
+    const now = new Date();
+    const diff = eventDate - now;
 
-    function updateCountdown() {
-      const now = new Date();
-      const diff = eventDate - now;
-
-      if (diff <= 0) {
-        document.querySelector(".countdown").innerHTML =
-          "¡Hoy celebramos el Baby Shower de Faustino! 🎉";
-        return;
+    if (diff <= 0) {
+      const countdown = document.querySelector(".countdown");
+      if (countdown) {
+        countdown.innerHTML = "¡Hoy celebramos el Baby Shower de Faustino! 🎉";
       }
-
-      const seconds = Math.floor(diff / 1000);
-      const days = Math.floor(seconds / (3600 * 24));
-      const hours = Math.floor((seconds % (3600 * 24)) / 3600);
-      const minutes = Math.floor((seconds % 3600) / 60);
-      const sec = seconds % 60;
-
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = sec;
+      return;
     }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    const seconds = Math.floor(diff / 1000);
+    const days = Math.floor(seconds / (3600 * 24));
+    const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const sec = seconds % 60;
 
-    // Música
+    document.getElementById("days").textContent    = days;
+    document.getElementById("hours").textContent   = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = sec;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ⭐ MÚSICA
+  function toggleMusic() {
     const music = document.getElementById("bg-music");
-    if (music) {
-      music.volume = 0.35;
-    }
+    if (!music) return;
 
-    function toggleMusic() {
-      if (!music) return;
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
+    music.volume = 0.4; // volumen suave
+
+    if (music.paused) {
+      music.play().catch(err => {
+        console.log("Error al reproducir la música:", err);
+      });
+    } else {
+      music.pause();
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
